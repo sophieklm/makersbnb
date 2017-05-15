@@ -41,6 +41,10 @@ I would like to be able to list multiple spaces
 ```
 Add password confirmation to signup
 ```
+Updating a space
+```
+email communications to customer
+```
 
 ### Headline specifications
 
