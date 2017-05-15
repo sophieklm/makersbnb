@@ -4,6 +4,42 @@ https://github.com/makersacademy/course/tree/master/makersbnb
 
 We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
+### User Stories
+
+```
+User story 1
+As a user,
+So that I can list my space for rent
+I would like to be able to sign up for MakersBnB
+
+User story 2
+As a user,
+So that I can list my space for rent
+I would like to be able to list a new space
+```
+
+### Extra User Stories
+User story 3
+As a user,
+So I can receive diversified streams of income
+I would like to be able to list multiple spaces
+
+User story 4
+As a user,
+So I can lure clients in to my basement
+I would like to be able to name my space
+
+User story 5
+As a user,
+So I can have fun on the side....;)
+I would like to provide a short description of the space
+
+User story 6
+As a user,
+So I can make sure to get as much $$ as possible from these suckers
+I would like to give a price per night for my pad
+```
+
 ### Headline specifications
 
 - Any signed-up user can list a new space.
@@ -40,9 +76,3 @@ We would like a web application that allows users to list spaces they have avail
 ### Mockups
 
 Mockups for MakersBnB are available [here](https://github.com/makersacademy/course/blob/master/makersbnb/makers_bnb_images/MakersBnB_mockups.pdf).
-
-### User Stories
-
-```
-
-```
