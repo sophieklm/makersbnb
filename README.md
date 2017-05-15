@@ -9,49 +9,50 @@ We would like a web application that allows users to list spaces they have avail
 ```
 User story 1
 As a user,
-So that I can list my space for rent
-I would like to be able to sign up for MakersBnB
+So that I can list my space for rent and hire spaces
+I would like to be able to sign up with a username for MakersBnB
 
 User story 2
 As a user,
 So that I can list my space for rent
 I would like to be able to list a new space
+
+User story 3
+As a user,
+So I can lure clients in to my basement
+I would like to be able to name my space, description & price
+
+User story 4
+As a user,
+So I can have a place to crash after an epic night out in Hull
+I would like to hire a space for one night
 ```
 
 ### Extra User Stories
-User story 3
+```
+User story 5
 As a user,
 So I can receive diversified streams of income
 I would like to be able to list multiple spaces
 
-User story 4
-As a user,
-So I can lure clients in to my basement
-I would like to be able to name my space
+```
 
-User story 5
-As a user,
-So I can have fun on the side....;)
-I would like to provide a short description of the space
-
-User story 6
-As a user,
-So I can make sure to get as much $$ as possible from these suckers
-I would like to give a price per night for my pad
+### Extra functionality
+```
+Add password confirmation to signup
 ```
 
 ### Headline specifications
 
+# Basic functionality:
 - Any signed-up user can list a new space.
-- Users can list multiple spaces.
 - Users should be able to name their space, provide a short description of the space, and a price per night.
+- Any signed-up user can request to hire any space for one night, without owner approval
 
-
-
-- Users should be able to offer a range of dates where their space is available.
-
-
-- Any signed-up user can request to hire any space for one night, and this should be approved by the user that owns that space.
+# Additional functionality
+- Booking should be approved by the user that owns that space (extension of basic functionality).
+- Users can list multiple spaces.
+- Users should be able to offer a range of dates where their space is available
 - Nights for which a space has already been booked should not be available for users to book that space.
 - Until a user has confirmed a booking request, that space can still be booked for that night.
 
