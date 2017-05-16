@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
-  up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('Spaces', {
+  up: (queryInterface, Sequelize) =>
+    queryInterface.createTable('Spaces', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -9,13 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       description: {
         type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
@@ -24,10 +26,7 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
-    });
-  },
-  down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('Spaces');
-  }
+      },
+    }),
+  down: (queryInterface, Sequelize) => queryInterface.dropTable('Spaces'),
 };
