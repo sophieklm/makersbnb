@@ -2,22 +2,25 @@
   "development": {
     "username": "postgres",
     "password": null,
-    "database": "database_development",
+    "database": "makersbnb_dev",
     "host": "127.0.0.1",
+    "port": 5432,
     "dialect": "postgres"
   },
   "test": {
-    "username": "project0",
+    "username": "postgres",
     "password": null,
-    "database": "database_test",
+    "database": "makersbnb_test",
     "host": "127.0.0.1",
+    "port": 5432,
     "dialect": "postgres"
   },
   "production": {
-    "username": "project0",
+    "username": "postgres",
     "password": null,
-    "database": "database_production",
+    "database": "makersbnb_prod",
     "host": "127.0.0.1",
+    "port": 5432,
     "dialect": "postgres"
   }
 }
