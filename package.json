@@ -1,0 +1,25 @@
+{
+  "name": "makersbnb",
+  "version": "1.0.0",
+  "description": "https://github.com/makersacademy/course/tree/master/makersbnb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sblausten/makersbnb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sblausten/makersbnb/issues"
+  },
+  "homepage": "https://github.com/sblausten/makersbnb#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1"
+  }
+}

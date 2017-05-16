@@ -40,9 +40,9 @@ I would like to be able to list multiple spaces
 ### Extra functionality
 ```
 Add password confirmation to signup
-```
+
 Updating a space
-```
+
 email communications to customer
 ```
 
