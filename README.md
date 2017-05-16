@@ -4,6 +4,12 @@ https://github.com/makersacademy/course/tree/master/makersbnb
 
 We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
+### Setup
+
+sequelize db:migrate
+sequelize db:migrate --env="test"
+
+
 ### User Stories
 
 ```
@@ -40,9 +46,9 @@ I would like to be able to list multiple spaces
 ### Extra functionality
 ```
 Add password confirmation to signup
-```
+
 Updating a space
-```
+
 email communications to customer
 ```
 
