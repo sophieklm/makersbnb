@@ -5,9 +5,9 @@ module.exports = (app) => {
     message: "Welcome to the nodemonbnb",
   }));
 
-  app.get('/users/new', (req, res) => res.status(200).send( {
-    message: "captures new users"
-  }));
+  app.get('/users/new', function(req, res) {
+      res.render('signup.ejs');
+  });
 
   app.post('/users/new', userController.create);
 
