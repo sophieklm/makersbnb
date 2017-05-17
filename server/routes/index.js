@@ -5,18 +5,21 @@ module.exports = (app) => {
     message: "Welcome to the nodemonbnb",
   }));
 
-  app.get('/users/new', (req, res) => res.status(200).send( {
-    message: "captures new users"
-  }));
+  app.get('/users/new', function(req, res) {
+      res.render('signup.ejs');
+  });
 
-  app.post('/users/new', userController.create);
+  app.post('/users/new', function(req, res) {
+    userController.create;
+    res.redirect('/');
+  });
 
   app.get('/spaces', (req, res) => res.status(200).send( {
-    message: "displays spaces available"
+    message: "displays spaces available",
   }));
 
   app.get('/spaces/new', (req, res) => res.status(200).send( {
-    message: "user interface to add a space"
+    message: "user interface to add a space",
   }));
 
   app.post('/spaces/new', (req, res) => res.status(200).send( {
