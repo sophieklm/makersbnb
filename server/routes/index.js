@@ -1,9 +1,9 @@
 const userController = require('../controllers').user;
 
 module.exports = (app) => {
-  app.get('/', (req, res) => res.status(200).send({
-    message: "Welcome to the nodemonbnb",
-  }));
+  app.get('/', function(req, res) {
+      res.render('index.ejs');
+  });
 
   app.get('/users/new', function(req, res) {
       res.render('signup.ejs');
