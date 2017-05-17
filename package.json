@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "test": "jasmine-node spec"
   },
   "repository": {
@@ -30,7 +29,10 @@
     "sequelize": "^3.30.4"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "jasmine-node": "^1.14.5",
-    "nodemon": "^1.11.0"
+    "mocha": "^3.4.1",
+    "nodemon": "^1.11.0",
+    "webdriverio": "^4.8.0"
   }
 }
