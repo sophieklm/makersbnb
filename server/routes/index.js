@@ -5,10 +5,6 @@ module.exports = (app) => {
       res.render('index.ejs');
   });
 
-  app.get('/users/new', function(req, res) {
-      res.render('signup.ejs');
-  });
-
   app.post('/users/new', function(req, res) {
     userController.create;
     res.redirect('/');

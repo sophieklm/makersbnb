@@ -28,7 +28,7 @@ As a user,
 So I can lure clients in to my basement
 I would like to be able to name my space, description & price
 
-  User story 4
+User story 4
 As a user,
 So I can have a place to crash after an epic night out in Hull
 I would like to hire a space for one night
