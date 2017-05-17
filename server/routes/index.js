@@ -12,11 +12,11 @@ module.exports = (app) => {
   app.post('/users/new', userController.create);
 
   app.get('/spaces', (req, res) => res.status(200).send( {
-    message: "displays spaces available"
+    message: "displays spaces available",
   }));
 
   app.get('/spaces/new', (req, res) => res.status(200).send( {
-    message: "user interface to add a space"
+    message: "user interface to add a space",
   }));
 
   app.post('/spaces/new', (req, res) => res.status(200).send( {
