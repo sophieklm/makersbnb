@@ -18,7 +18,7 @@
 
       it("returns Hello World", function(done) {
         request.get(base_url, function(error, response, body) {
-          expect(body).toBe("Hello World");
+          expect(body).toBe("Welcome to the nodemonbnb");
           done();
         });
       });
