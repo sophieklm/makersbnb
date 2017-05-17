@@ -16,9 +16,9 @@ module.exports = (app) => {
     message: "displays spaces available"
   }));
 
-  app.get('/spaces/new', (req, res) => res.status(200).send( {
-    message: "user interface to add a space"
-  }));
+  app.get('/spaces/new', function(req, res) {
+    req.render('newspace.ejs');
+  });
 
   app.post('/spaces/new', spaceController.create);
 
