@@ -1,5 +1,3 @@
-space.js
-
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Space = sequelize.define('Space', {

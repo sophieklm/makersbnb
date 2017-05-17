@@ -20,6 +20,6 @@ module.exports = (app) => {
     req.render('newspace.ejs');
   });
 
-  app.post('/spaces/new', spaceController.create);
+  // app.post('/spaces/new', spaceController.create);
 
 };
