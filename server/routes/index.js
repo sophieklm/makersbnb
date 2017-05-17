@@ -9,7 +9,10 @@ module.exports = (app) => {
       res.render('signup.ejs');
   });
 
-  app.post('/users/new', userController.create);
+  app.post('/users/new', function(req, res) {
+    userController.create;
+    res.redirect('/');
+  });
 
   app.get('/spaces', (req, res) => res.status(200).send( {
     message: "displays spaces available",
