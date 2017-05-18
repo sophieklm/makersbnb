@@ -6,8 +6,8 @@ module.exports = (app) => {
       res.render('index.ejs');
   });
 
-  app.post('/users/new', function(req, res) {
-    userController.create;
+  app.post('/users/new', function(req,res){
+    userController.create(req,res);
     res.redirect('/');
   });
 
@@ -19,10 +19,9 @@ module.exports = (app) => {
     res.render('spaces/new.ejs');
   });
 
-  app.post('/spaces/new', function(req, res) {
-    spaceController.create;
+  app.post('/spaces/new', function(req,res){
+    spaceController.create(req,res);
     res.redirect('/spaces');
-
   });
 
 };
