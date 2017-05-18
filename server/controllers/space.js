@@ -1,26 +1,14 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const Space = sequelize.define('Space', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-    },
-    price: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-  }, {
-    classMethods: {
-      associate: (models) => {
-        Space.belongsTo(models.User,{
-          foreignKey: 'userId',
-          onDelete: 'CASCADE',
-        });
-      },
-    },
-  });
-  return Space;
+const Space = require('../models').Space;
+
+module.exports = {
+  create(req, res) {
+    return Space
+      .create({
+        name: req.body.name,
+        description: req.body.description,
+        price: req.body.price,
+      })
+      .then(space => res.status(201).send(space))
+      .catch(error => res.status(400).send(error));
+  },
 };

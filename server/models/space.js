@@ -13,14 +13,14 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   }, {
-    classMethods: {
-      associate: (models) => {
-        Space.belongsTo(models.User,{
-          foreignKey: 'userId',
-          onDelete: 'CASCADE',
-        });
-      },
-    },
+    // classMethods: {
+    //   associate: (models) => {
+    //     Space.belongsTo(models.User,{
+    //       foreignKey: 'userId',
+    //       onDelete: 'CASCADE',
+    //     });
+    //   },
+    // },
   });
   return Space;
 };
