@@ -12,7 +12,8 @@ module.exports = (app) => {
   });
 
   app.get('/spaces', function(req, res) {
-    res.render('spaces/index.ejs');
+    var spaces = spaceController.retrieve(req,res);
+    res.render('spaces/index.ejs', {spaces});
   });
 
   app.get('/spaces/new', function(req, res) {
