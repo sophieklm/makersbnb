@@ -8,7 +8,9 @@ module.exports = {
       description: req.body.description,
       price: req.body.price,
     })
-    .then(space => res.status(201).send(space))
+    .then(space => {
+      return res.status(200).redirect('/spaces');
+    })
     .catch(error => res.status(400).send(error));
   },
 
@@ -21,8 +23,7 @@ module.exports = {
           message: 'Space Not Found',
         });
       }
-
-      return res.status(200).render('spaces/index.ejs', { spaces });
+      return res.status(200).render('spaces/index.ejs', {spaces: spaces});
     })
     .catch(error => res.status(400).send(error));
   },
