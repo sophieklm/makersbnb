@@ -1,4 +1,5 @@
 const userController = require('../controllers').user;
+const spaceController = require('../controllers').space;
 
 module.exports = (app) => {
   app.get('/', function(req, res) {
@@ -14,12 +15,10 @@ module.exports = (app) => {
     message: "displays spaces available",
   }));
 
-  app.get('/spaces/new', (req, res) => res.status(200).send( {
-    message: "user interface to add a space",
-  }));
+  app.get('/spaces/new', function(req, res) {
+    res.render('newspace.ejs');
+  });
 
-  app.post('/spaces/new', (req, res) => res.status(200).send( {
-    // Will redirect this to /spaces
-  }));
+  // app.post('/spaces/new', spaceController.create);
 
 };
