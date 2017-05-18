@@ -11,19 +11,18 @@ module.exports = (app) => {
     res.redirect('/');
   });
 
-  app.get('/spaces', (req, res) => res.status(200).send( {
-    message: "displays spaces available",
-  }));
+  app.get('/spaces', function(req, res) {
+    res.render('spaces/index.ejs');
+  });
 
   app.get('/spaces/new', function(req, res) {
-    res.render('newspace.ejs');
+    res.render('spaces/new.ejs');
   });
 
   app.post('/spaces/new', function(req, res) {
     spaceController.create;
     res.redirect('/spaces');
 
-  }); 
-
+  });
 
 };
