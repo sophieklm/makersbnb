@@ -2,18 +2,17 @@ const userController = require('../controllers').user;
 const spaceController = require('../controllers').space;
 
 module.exports = (app) => {
-  app.get('/', (req, res) => res.status(200).send({
-    message: "Welcome to the nodemonbnb",
-  }));
+  app.get('/', function(req, res) {
+      res.render('index.ejs');
+  });
 
-  app.get('/users/new', (req, res) => res.status(200).send( {
-    message: "captures new users"
-  }));
-
-  app.post('/users/new', userController.create);
+  app.post('/users/new', function(req, res) {
+    userController.create;
+    res.redirect('/');
+  });
 
   app.get('/spaces', (req, res) => res.status(200).send( {
-    message: "displays spaces available"
+    message: "displays spaces available",
   }));
 
   app.get('/spaces/new', function(req, res) {
