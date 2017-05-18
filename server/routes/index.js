@@ -17,7 +17,7 @@ module.exports = (app) => {
   }));
 
   app.get('/spaces/new', function(req, res) {
-    req.render('newspace.ejs'); 
+    res.render('newspace.ejs');
   });
 
   // app.post('/spaces/new', spaceController.create);
