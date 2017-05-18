@@ -12,15 +12,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-  }, {
-    classMethods: {
-      associate: (models) => {
-        Space.belongsTo(models.User,{
-          foreignKey: 'userId',
-          onDelete: 'CASCADE',
-        });
-      },
-    },
   });
   return Space;
 };
