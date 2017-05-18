@@ -12,13 +12,11 @@ module.exports = (app) => {
   });
 
   app.get('/spaces', function(req, res) {
-    res.render('spaces.ejs');
+    res.render('spaces/index.ejs');
   });
 
   app.get('/spaces/new', function(req, res) {
-    res.render('newspace.ejs');
+    res.render('spaces/new.ejs');
   });
-
-  // app.post('/spaces/new', spaceController.create);
 
 };
