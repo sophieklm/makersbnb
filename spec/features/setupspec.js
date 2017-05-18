@@ -12,8 +12,7 @@ describe("testing with zombie", function() {
     });
 
     it("should visit the site and see the login form", function(next) {
-        browser.visit(url, function(err) {
-          console.log("hello");
+        browser.visit(url, function(next) {
             expect(browser.success).toBe(true);
             expect(browser.query("input[value='Sign up']")).toBeDefined();
             next();

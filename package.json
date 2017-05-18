@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon ./bin/www",
-    "test": "jasmine-node spec",
-    "zombie": "jasmine-node ./spec/ZombieSpec.js"
+    "test": "jasmine-node spec"
   },
   "repository": {
     "type": "git",
