@@ -11,9 +11,9 @@ module.exports = (app) => {
     res.redirect('/');
   });
 
-  app.get('/spaces', (req, res) => res.status(200).send( {
-    message: "displays spaces available",
-  }));
+  app.get('/spaces', function(req, res) {
+    res.render('spaces.ejs');
+  });
 
   app.get('/spaces/new', function(req, res) {
     res.render('newspace.ejs');
