@@ -1,6 +1,6 @@
 
 var Browser = require("zombie");
-var url = "localhost:8000";
+var url = "http://localhost:8000";
 var browser = new Browser();
 
 describe("testing with zombie", function() {
@@ -13,6 +13,7 @@ describe("testing with zombie", function() {
 
     it("should visit the site and see the login form", function(next) {
         browser.visit(url, function(err) {
+          console.log("hello");
             expect(browser.success).toBe(true);
             expect(browser.query("input[value='Sign up']")).toBeDefined();
             next();

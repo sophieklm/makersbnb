@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "nodemon ./bin/www",
     "test": "jasmine-node spec",
-    "zombie": "jasmine-node ZombieTest.js"
+    "zombie": "jasmine-node ./spec/ZombieSpec.js"
   },
   "repository": {
     "type": "git",
