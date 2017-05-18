@@ -14,13 +14,5 @@
           done();
         });
       });
-
-
-      it("returns hello nodemon", function(done) {
-        request.get(base_url, function(error, response, body) {
-          expect(body).toBe('{"message":"Welcome to the nodemonbnb"}');
-          done();
-        });
-      });
     });
   });
