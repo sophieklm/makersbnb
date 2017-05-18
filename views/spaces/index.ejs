@@ -15,14 +15,24 @@
    <div class="jumbotron text-center">
 
      <h1>Book a Space</h1>
+     <br>
 
 <form action="/spaces/new" method="get">
   <button type="submit" class="btn btn-warning btn-lg">List a space</button>
 
 </form>
-
+<br>
 <div class="spaces">
-  <%= spaces %>
+  <div class="spaces">
+  <% spaces.forEach(function(space) { %>
+<p class = "one">
+          <b><%= space.name %><br></b>
+          Description: <%= space.description %> <br>
+          Price per night: £<%= space.price %>
+</p>
+<br>
+        <% });%>
+</div>
 
 </div>
 
