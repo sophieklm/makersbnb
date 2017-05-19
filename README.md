@@ -98,8 +98,10 @@ Mockups for MakersBnB are available [here](https://github.com/makersacademy/cour
 
 https://nodemonbnb.herokuapp.com
 
-heroku create [optionalappname]
-git push heroku [branch]:master
-heroku ps:scale web=1
-heroku addons:add heroku-postgresql:hobby-dev
-heroku run sequelize db:migrate
+```
+$ heroku create [optionalappname]
+$ git push heroku [branch]:master
+$ heroku ps:scale web=1
+$ heroku addons:add heroku-postgresql:hobby-dev
+$ heroku run sequelize db:migrate
+```
