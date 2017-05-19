@@ -7,6 +7,7 @@ module.exports = {
       name: req.body.name,
       description: req.body.description,
       price: req.body.price,
+      available: req.body.available,
     })
     .then(space => {
       return res.status(200).redirect('/spaces');

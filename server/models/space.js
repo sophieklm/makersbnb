@@ -12,6 +12,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    available: {
+      type: DataTypes.DATE,
+    },
 
   }, {
     // classMethods: {
