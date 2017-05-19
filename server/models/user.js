@@ -9,15 +9,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-  }, {
-    classMethods: {
-      associate: (models) => {
-        User.hasMany(models.Space, {
-          foreignKey: 'userId',
-          as: 'spaces',
-        });
-      },
-    },
+  // }, {
+  //   classMethods: {
+  //     associate: (models) => {
+  //       User.hasMany(models.Space, {
+  //         foreignKey: 'userId',
+  //         as: 'spaces',
+  //       });
+  //     },
+  //   },
   });
   return User;
 };

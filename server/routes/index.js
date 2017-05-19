@@ -6,23 +6,17 @@ module.exports = (app) => {
       res.render('index.ejs');
   });
 
-  app.post('/users/new', function(req, res) {
-    userController.create;
-    res.redirect('/');
-  });
+  // app.post('/users/new', function  (req, res){
+  //   userController.create(req, res);
+  //   res.redirect('/');
+  // });
 
-  app.get('/spaces', function(req, res) {
-    res.render('spaces/index.ejs');
-  });
+  app.get('/spaces', spaceController.retrieve);
 
-  app.get('/spaces/new', function(req, res) {
+  app.get('/spaces/new', function (req, res) {
     res.render('spaces/new.ejs');
   });
 
-  app.post('/spaces/new', function(req, res) {
-    spaceController.create;
-    res.redirect('/spaces');
-
-  });
+  app.post('/spaces/new', spaceController.create);
 
 };
