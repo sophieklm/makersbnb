@@ -26,9 +26,9 @@
   <div class="spaces">
   <% spaces.forEach(function(space) { %>
 <p class = "one">
-          <b><%= space.name %><br></b>
+          <button><b><%= space.name %><br></b>
           Description: <%= space.description %> <br>
-          Price per night: £<%= space.price %>
+          Price per night: £<%= space.price %></button>
 </p>
 <br>
         <% });%>
