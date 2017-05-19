@@ -1,7 +1,7 @@
 const userController = require('../controllers').user;
 const spaceController = require('../controllers').space;
 
-module.exports = (app) => {
+module.exports = (app, passport) => {
   app.get('/', function(req, res) {
     res.render('index.ejs');
   });
@@ -15,6 +15,16 @@ module.exports = (app) => {
   });
 
   app.post('/spaces/new', spaceController.create);
+
+
+  app.get('/login', function(req, res){
+    res.render('login.ejs');
+  });
+
+  app.post('/login', passport.authenticate('local-login', {
+         successRedirect : '/spaces', // redirect to the secure profile section
+         failureRedirect : '/', // redirect back to the signup page if there is an error
+     }));
 
   app.get('/bookings/new', function (req, res) {
     res.render('bookings/new.ejs');
