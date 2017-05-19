@@ -3,7 +3,7 @@ const spaceController = require('../controllers').space;
 
 module.exports = (app) => {
   app.get('/', function(req, res) {
-      res.render('index.ejs');
+    res.render('index.ejs');
   });
 
   app.post('/users/new', userController.create);
@@ -15,5 +15,9 @@ module.exports = (app) => {
   });
 
   app.post('/spaces/new', spaceController.create);
+
+  app.get('/bookings/new', function (req, res) {
+    res.render('bookings/new.ejs');
+  });
 
 };
