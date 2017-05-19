@@ -6,7 +6,7 @@ We would like a web application that allows users to list spaces they have avail
 
 ### Setup
 
-sequelize db:migrate
+sequelize db:migrate 
 sequelize db:migrate --env="test"
 
 
