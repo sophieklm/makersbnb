@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const session = require('express-session');
 const app = express();
 
 app.use(logger('dev'));
