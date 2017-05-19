@@ -103,10 +103,3 @@ git push heroku [branch]:master
 heroku ps:scale web=1
 heroku addons:add heroku-postgresql:hobby-dev
 heroku run sequelize db:migrate
-
-Then for any changes:
-----
-git add .
-git commit -m "message"
-git push heroku [branch]:master
------
