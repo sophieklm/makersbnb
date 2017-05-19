@@ -16,7 +16,8 @@ module.exports = (app) => {
 
   app.post('/spaces/new', spaceController.create);
 
-  app.get('/bookings/new', (req, res) => res.status(200).send({
-    message: "Welcome to the bookings page",
-  }));
+  app.get('/bookings/new', function (req, res) {
+    res.render('bookings/new.ejs');
+  });
+
 };
