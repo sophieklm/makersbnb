@@ -9,10 +9,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( { extended: false }));
 
-// required for passport
-app.use(session({ secret: 'super_secret' })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+// // required for passport
+// app.use(session({ secret: 'super_secret' })); // session secret
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
 
 app.set('view engine', 'ejs');
 

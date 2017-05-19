@@ -20,7 +20,10 @@ module.exports = (app, passport) => {
     res.render('login.ejs');
   });
 
-   // app.post('/login', do all our passport stuff here);
+  app.post('/login', passport.authenticate('local-login', {
+         successRedirect : '/spaces', // redirect to the secure profile section
+         failureRedirect : '/login', // redirect back to the signup page if there is an error
+     }));
 
    app.get('/logout', function(req, res) {
         req.logout();
