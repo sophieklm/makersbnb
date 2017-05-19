@@ -3,7 +3,7 @@ const spaceController = require('../controllers').space;
 
 module.exports = (app, passport) => {
   app.get('/', function(req, res) {
-      res.render('index.ejs');
+    res.render('index.ejs');
   });
 
   app.post('/users/new', userController.create);
@@ -16,6 +16,7 @@ module.exports = (app, passport) => {
 
   app.post('/spaces/new', spaceController.create);
 
+
   app.get('/login', function(req, res){
     res.render('login.ejs');
   });
@@ -25,9 +26,8 @@ module.exports = (app, passport) => {
          failureRedirect : '/', // redirect back to the signup page if there is an error
      }));
 
-   app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/');
-    });
+  app.get('/bookings/new', function (req, res) {
+    res.render('bookings/new.ejs');
+  });
 
 };

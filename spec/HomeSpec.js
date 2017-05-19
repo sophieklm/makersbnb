@@ -8,11 +8,11 @@
 
   describe("Signup", function() {
     describe("GET /", function() {
-      it("finds signup form", function(done) {
+      it("finds signup form", function(next) {
         request.get(base_url, function(error, response, body) {
           expect(body).toContain('Email');
           expect(body).toContain('Password');
-          done();
+          next();
         });
       });
     });
