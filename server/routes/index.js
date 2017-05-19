@@ -6,10 +6,7 @@ module.exports = (app) => {
       res.render('index.ejs');
   });
 
-  // app.post('/users/new', function  (req, res){
-  //   userController.create(req, res);
-  //   res.redirect('/');
-  // });
+  app.post('/users/new', userController.create);
 
   app.get('/spaces', spaceController.retrieve);
 
