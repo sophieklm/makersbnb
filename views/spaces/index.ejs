@@ -26,7 +26,8 @@
   <div class="spaces">
   <% spaces.forEach(function(space) { %>
 <p class = "one">
-          <button><b><%= space.name %><br></b>
+  <form action = "/bookings/new" method = "get">
+          <button type = "submit" ><b><%= space.name %><br></b>
           Description: <%= space.description %> <br>
           Price per night: £<%= space.price %></button>
 </p>
