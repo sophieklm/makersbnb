@@ -22,7 +22,7 @@ module.exports = (app, passport) => {
 
   app.post('/login', passport.authenticate('local-login', {
          successRedirect : '/spaces', // redirect to the secure profile section
-         failureRedirect : '/login', // redirect back to the signup page if there is an error
+         failureRedirect : '/', // redirect back to the signup page if there is an error
      }));
 
    app.get('/logout', function(req, res) {
