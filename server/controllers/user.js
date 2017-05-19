@@ -7,7 +7,9 @@ module.exports = {
         email: req.body.email,
         password: req.body.password,
       })
-      .then(user => res.status(201).send(user))
+      .then(user => {
+        return res.status(200).redirect('/');
+      })
       .catch(error => res.status(400).send(error));
   },
 };
