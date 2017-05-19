@@ -6,7 +6,7 @@ We would like a web application that allows users to list spaces they have avail
 
 ### Setup
 
-sequelize db:migrate 
+sequelize db:migrate
 sequelize db:migrate --env="test"
 
 
@@ -51,11 +51,10 @@ I would like to be able to list multiple spaces
 
 ### Extra functionality
 ```
+Log in/out
 Add password confirmation to signup
-
 Updating a space
-
-email communications to customer
+Email communications to customer
 ```
 
 ### Headline specifications
@@ -93,3 +92,21 @@ email communications to customer
 ### Mockups
 
 Mockups for MakersBnB are available [here](https://github.com/makersacademy/course/blob/master/makersbnb/makers_bnb_images/MakersBnB_mockups.pdf).
+
+
+### Heroku
+
+https://nodemonbnb.herokuapp.com
+
+heroku create [optionalappname]
+git push heroku [branch]:master
+heroku ps:scale web=1
+heroku addons:add heroku-postgresql:hobby-dev
+heroku run sequelize db:migrate
+
+Then for any changes:
+----
+git add .
+git commit -m "message"
+git push heroku [branch]:master
+-----
