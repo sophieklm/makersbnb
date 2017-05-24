@@ -1,9 +1,8 @@
-
-var LocalStrategy   = require('passport-local').Strategy;
-const User            = require('../models').User;
-
 // expose this function to our app using module.exports
 module.exports = function(passport) {
+
+  const User = require('../models').User;
+  var LocalStrategy = require('passport-local').Strategy;
 
     // =========================================================================
     // passport session setup ==================================================
@@ -32,7 +31,13 @@ module.exports = function(passport) {
 
             // find a user whose email is the same as the forms email
             // we are checking to see if the user trying to login already exists
-            User.findOne({ where: {email: email} }, function(err, user) {
+            User.findOne({ where: {email: email} }).then(function(user) {
+              if(user) {
+                return done(null, user);
+              } else {
+                return done(null, false);
+              }
+          //  }), function(err, user) {
                 // if there are any errors, return the error before anything else
                 // if (err)
                 //     return done(err);
@@ -44,13 +49,10 @@ module.exports = function(passport) {
                 // // if the user is found but the password is wrong
                 // if (!user.validPassword(password))
                 //     return done(null, false, { message: 'Incorrect password.' }); // create the loginMessage and save it to session as flashdata
-                console.log(user);
                 // all is well, return successful user
-                return done(null, user);
-            });
+          //  });
 
-        }));
+        });
 
-
-
-    };
+    }));
+};

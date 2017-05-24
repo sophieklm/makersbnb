@@ -5,14 +5,12 @@ const passport = require('passport');
 const session = require('express-session');
 const app = express();
 
-require('./server/config/passport')(passport); 
-
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( { extended: false }));
 
 // required for passport
-//app.use(session({ secret: 'super_secret' })); // session secret
+// app.use(session({ secret: 'super_secret' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
@@ -22,5 +20,7 @@ require('./server/routes')(app, passport);
 app.get('*', (req, res) => res.status(200).send( {
   message: "Welcome to NodemonBnB!"
 }));
+
+require('./server/config/passport.js')(passport);
 
 module.exports = app;
