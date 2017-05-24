@@ -1,20 +1,50 @@
 # MakersBnB
 
-https://github.com/makersacademy/course/tree/master/makersbnb
+Makers team project to build an AirBnB type application to allow users to list spaces they have available, and to hire spaces for the night.
 
-We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
+Uses: JavaScript, Node.js, Express, PostgreSQL, Sequelize
 
 ### Setup
 
-sequelize db:migrate
-sequelize db:migrate --env="test"
+Clone the repo and install dependencies:
 
+```
+$ git clone https://github.com/sophieklm/makersbnb.git
+$ cd makersbnb
+$ npm install
+```
+
+You will need PostgreSQL installed locally, create a new database, and update server/config.json with your settings then run the migration:
+
+```
+$ createdb makersbnb_dev
+$ sequelize db:migrate
+```
 
 ### Testing
 
-run a server using npm run start:dev
-run tests via npm test
+Run on a local server using:
+```
+$ npm run start:dev
+```
+Run tests via:
+```
+$ npm test
+```
 
+### Deployment
+
+To create a Heroku app like the one below use the following commands (requires local heroku installation and login)
+
+https://nodemonbnb.herokuapp.com
+
+```
+$ heroku create [optionalappname]
+$ git push heroku master
+$ heroku ps:scale web=1
+$ heroku addons:add heroku-postgresql:hobby-dev
+$ heroku run sequelize db:migrate
+```
 
 ### User Stories
 
@@ -53,11 +83,11 @@ I would like to be able to list multiple spaces
 ```
 Log in/out
 Add password confirmation to signup
-Updating a space
-Email communications to customer
 ```
 
 ### Headline specifications
+
+https://github.com/makersacademy/course/tree/master/makersbnb
 
 # Basic functionality:
 - Any signed-up user can list a new space.
@@ -92,16 +122,3 @@ Email communications to customer
 ### Mockups
 
 Mockups for MakersBnB are available [here](https://github.com/makersacademy/course/blob/master/makersbnb/makers_bnb_images/MakersBnB_mockups.pdf).
-
-
-### Heroku
-
-https://nodemonbnb.herokuapp.com
-
-```
-$ heroku create [optionalappname]
-$ git push heroku [branch]:master
-$ heroku ps:scale web=1
-$ heroku addons:add heroku-postgresql:hobby-dev
-$ heroku run sequelize db:migrate
-```
