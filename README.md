@@ -4,6 +4,8 @@ Makers team project to build an AirBnB type application to allow users to list s
 
 Uses: JavaScript, Node.js, Express, PostgreSQL, Sequelize
 
+![ScreenShot](https://raw.github.com/sophieklm/makersbnb/master/img/makersbnb_screenshot.png)
+
 ### Setup
 
 Clone the repo and install dependencies:
