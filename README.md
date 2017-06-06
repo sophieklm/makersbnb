@@ -36,9 +36,7 @@ $ npm test
 
 ### Deployment
 
-To create a Heroku app like the one below use the following commands (requires local heroku installation and login)
-
-https://nodemonbnb.herokuapp.com
+To create a Heroku app use the following commands (requires local heroku installation and login)
 
 ```
 $ heroku create [optionalappname]
